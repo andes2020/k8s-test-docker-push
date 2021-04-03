@@ -9,4 +9,3 @@ web <=> api <=> db
 
 The folders `web` and `api` respectively describe how to install and run each app.
 
-
