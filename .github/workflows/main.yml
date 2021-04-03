@@ -23,16 +23,20 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           
-      - name: Build node web app from web folder Dockerfile and push
-        uses: docker/build-push-action@v2
-        with:
-          context: ./web/
-          push: true
-          tags: andeslam2019/k8s-test-node-web-app:latest
+#       - name: Build node web app from web folder Dockerfile and push
+#         uses: docker/build-push-action@v2
+#         with:
+#           context: ./web/
+#           push: true
+#           tags: andeslam2019/k8s-test-node-web-app:latest
+      - name: Build the Docker image
+        run: |
+          cd api
+          docker build -t andes2020/k8s-test-node-web-app:latest .
       
-      - name: Build node api server from api folder Dockerfile and push
-        uses: docker/build-push-action@v2
-        with:
-          context: ./api/
-          push: true
-          tags: andeslam2019/k8s-test-node-api-server:latest
+#       - name: Build node api server from api folder Dockerfile and push
+#         uses: docker/build-push-action@v2
+#         with:
+#           context: ./api/
+#           push: true
+#           tags: andeslam2019/k8s-test-node-api-server:latest
