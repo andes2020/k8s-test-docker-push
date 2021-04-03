@@ -27,15 +27,15 @@ jobs:
         run: |
           docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
           cd api
-          docker build -t andes2020/k8s-test-node-api-server:latest .
-          docker push andes2020/k8s-test-node-api-server:latest
+          docker build -t andeslam2019/k8s-test-node-api-server:latest .
+          docker push andeslam2019/k8s-test-node-api-server:latest
           
       - name: Build node web app from web folder Dockerfile and push
         run: |
           docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
           cd web
-          docker build -t andes2020/k8s-test-node-web-app:latest .
-          docker push andes2020/k8s-test-node-web-app:latest
+          docker build -t andeslam2019/k8s-test-node-web-app:latest .
+          docker push andeslam2019/k8s-test-node-web-app:latest
       
 #       - name: Build node web app from web folder Dockerfile and push
 #         uses: docker/build-push-action@v2
