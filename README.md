@@ -9,5 +9,5 @@ web <=> api <=> db
 
 The folders `web` and `api` respectively describe how to install and run each app.
 
-Build status
+## Build status
 ![k8s-test-docker-push](https://github.com/andes2020/k8s-test-docker-push/actions/workflows/main.yml/badge.svg)
